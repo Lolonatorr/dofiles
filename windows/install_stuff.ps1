@@ -7,4 +7,9 @@ if ( $choice -eq "yes" ) {
     winget install $1
     }
 }
-tas
+$users = Get-ChildItem "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\ProfileList" | where { $_.PSChildName -match "S-1-5-21-\d{18}-\d{9}-\d{9}-\d{4}$" }
+
+foreach ($user in $users) {
+    $key = $user.PSPath + "\Software\Microsoft\Windows\CurrentVersion\Run"
+    Get-ChildItem $key | foreach { Set-ItemProperty $_.PSPath -Name "Enabled" -Value 0 }
+}
