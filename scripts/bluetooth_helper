@@ -7,6 +7,6 @@ do
     IFS="Device | " read -ra mac_addr <<< "$i"
     
     output=$available_wifis[$counter]
-    echo "$counter ${available_wifis[$counter]}"
+    echo "$counter $output"
     ((counter++))
 done
