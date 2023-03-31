@@ -25,3 +25,4 @@ edit_config_cmd="spicetify config prefs_path $prefs_path"
 $edit_config_cmd
 spicetify apply
 #prefs_path              = /home/elis/.config/spotify/prefs
+curl -fsSL https://raw.githubusercontent.com/spicetify/spicetify-marketplace/main/resources/install.sh | sh
