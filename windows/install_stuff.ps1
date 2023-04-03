@@ -4,7 +4,7 @@ $choice = Read-Host "do you want to install all of the following packages:"
 if ( $choice -eq "yes" ) {
     $packages = @('Discord.Discord','FancyWM','Virtualbox','7Zip.7zip','Mozilla.Firefox','code','Valve.Steam','nvidia','obsidian','alacritty','ubisoft')
     foreach ($i in $packages){
-    winget install $1
+    winget install $i
     }
 }
 $users = Get-ChildItem "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\ProfileList" | where { $_.PSChildName -match "S-1-5-21-\d{18}-\d{9}-\d{9}-\d{4}$" }
