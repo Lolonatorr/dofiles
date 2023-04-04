@@ -6,6 +6,7 @@ echo "Free System Bloater v0.1"
 pacman_pkgs=(
 discord
 alacritty    
+obsidian
 )
 pacman_cmd="sudo pacman -S "
 
@@ -31,7 +32,7 @@ done
 echo "-----------AUR-----------"
 for i in "${aur_pkgs[@]}"
 do
-    echo "$i"
+    echo "$i"S
 done 
 echo "-----------SNAP-----------"
 for i in "${snap_pkgs[@]}"
