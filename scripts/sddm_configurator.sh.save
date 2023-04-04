@@ -31,5 +31,3 @@ then
     $cp_bg
     $edit_config_bg_cmd
 fi
-echo "maybe you need to add a [theme] section with a attribute called current="
-echo "if the script still does not work then you should manually set the current variable to the theme you want."
