@@ -15,6 +15,7 @@ cava
 visual-studio-code-bin
 kwin-bismuth
 snapd
+icaclient
 )
 yay_cmd="yay -S "
 
@@ -38,4 +39,21 @@ echo "-----------SNAP-----------"
 for i in "${snap_pkgs[@]}"
 do
     echo "$i"
+done 
+
+
+echo "installing..."
+for i in "${pacman_pkgs[@]}"
+do
+    $pacman_cmd $i
+done 
+echo "-----------AUR-----------"
+for i in "${aur_pkgs[@]}"
+do
+    $yay_cmd $i
+done 
+echo "-----------SNAP-----------"
+for i in "${snap_pkgs[@]}"
+do
+    $snap_cmd $i
 done 
