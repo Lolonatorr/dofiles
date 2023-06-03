@@ -1,0 +1,10 @@
+#!/bin/bash
+echo"---------------Nvidia Fuck you-----------------"
+
+yay -S hyprland-nvidia --noconfirm
+yay -S ttf-cousine-nerd --noconfirm
+yay -S swaybg --noconfirm
+yay -S waybar --noconfirm
+yay -S wofi
+echo "audio can be controlled w pavucontrol"
+echo "Remember to set the 4 environement variables for nvidia in the hyprland config"
