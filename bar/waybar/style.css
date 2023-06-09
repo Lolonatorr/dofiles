@@ -90,6 +90,7 @@ button:hover {
 #scratchpad,
 #mpd,
 #user,
+#bluetooth,
 #custom-spotify-metadata{
     padding: 0 10px;
     color: #f3d08c;
@@ -125,12 +126,8 @@ font-style: italic;
 #clock {
 }
 
-#battery {
-    color: #000000;
-}
-
 #battery.charging, #battery.plugged {
-    color: #ffffff;
+    color: green;
 }
 
 @keyframes blink {
@@ -140,12 +137,7 @@ font-style: italic;
 }
 
 #battery.critical:not(.charging) {
-    color: #ffffff;
-    animation-name: blink;
-    animation-duration: 0.5s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+    color: red;
 }
 
 label:focus {
