@@ -230,5 +230,5 @@ bar {
 
 ## hide bar
 bindsym $mod+n bar mode toggle
-
+exec --no-startup-id picom
 
