@@ -103,7 +103,8 @@ source $ZSH/oh-my-zsh.sh
 alias nitsch="clear && nitch"
 alias cat="bat --plain"
 alias cit="cd ~/git"
+alias polybarr="/bin/bash ~/.config/polybar/colorblocks/launch.sh"
 export PATH="/home/phonkd/go/bin:$PATH"
 export EDITOR="alacritty --command nvim"
 export VISUAL="alacritty --command nvim"
-
+eval $(thefuck --alias)

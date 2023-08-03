@@ -81,4 +81,4 @@ sudo pacman -S i3-wm
 sudo chmod +x ~/git/dotfiles/wm/i3/i3quick.sh
 /bin/bash ~/git/dotfiles/wm/i3/i3quick.sh
 
-
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
