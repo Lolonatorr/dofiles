@@ -198,7 +198,8 @@ bindsym $mod+w exec firefox
 exec --no-startup-id xrandr --output DP-4 --mode 2560x1440 --rate 144 --rotate right --right-of DP-0
 exec --no-startup-id xrandr --output DP-0 --primary --mode 2560x1440 --rate 144
 
-
+#ssh
+exec --no-startup-id /bin/bash eval $(ssh-agent)
 #wallpaper
 exec --no-startup-id nitrogen --restore
 
@@ -233,5 +234,5 @@ bindsym $mod+n bar mode toggle
 exec --no-startup-id picom --config ~/git/dotfiles/wm/i3/picom-conf-new.conf
 
 # lock
-bindsym $mod+y
+bindsym $mod+y exec i3lock
 

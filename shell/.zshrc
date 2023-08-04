@@ -108,3 +108,64 @@ export PATH="/home/phonkd/go/bin:$PATH"
 export EDITOR="alacritty --command nvim"
 export VISUAL="alacritty --command nvim"
 eval $(thefuck --alias)
+
+
+#bedag alias
+
+
+#------------------------------------------------------------
+
+## Aliases for the functions above.
+## Uncomment an alias if you want to use it.
+##
+
+# alias ef='_open_files_for_editing'     # 'ef' opens given file(s) for editing
+# alias pacdiff=eos-pacdiff
+################################################################################
+
+## BEGIN ANSIBLE BLOCK ##
+bdg_proxy() {
+  export http{,s}_proxy="http://localhost:8888"
+}
+
+bk() {
+  kill "$(pgrep -f 'ssh.*fN.*gw.*[rbw]e.*')" 2>/dev/null
+}
+
+co() {
+  if pgrep -f '[s]shgwbe' 1>/dev/null; then { ssh sshgwcobe; true; } else ssh sshgwcowe; fi
+}
+
+ci() {
+  if pgrep -f '[s]shgwbe' 1>/dev/null; then { ssh sshgwcibe; true; } else ssh sshgwciwe; fi
+}
+
+kb() {
+  if pgrep -f '[s]shgwbe' 1>/dev/null; then { ssh sshgwkbbe; true; } else ssh sshgwkbwe; fi
+}
+
+coi() {
+  if pgrep -f '[s]shgwbe' 1>/dev/null; then { ssh admingwbe; true; } else ssh admingwwe; fi
+}
+
+alias bdg_ldap="source \${HOME}/.scripts/bdg_ldap.sh"
+alias bedag="~/.scripts/bdg_gwup.sh nobecloud"
+alias bedagx="~/.scripts/bdg_gwup.sh becloud"
+alias becloud1='ssh sshgw-region1.cloud.kb-bedag.ch'
+alias becloud2='ssh sshgw-region2.cloud.kb-bedag.ch'
+alias bs='pgrep -af "ssh -f[N]"'
+alias glab='bdg_proxy; /usr/bin/glab'
+
+# Kubernetes stuff
+# shellcheck source=/usr/bin/kubectl
+source <(kubectl completion bash)
+alias kubectl='bdg_proxy; /usr/bin/kubectl'
+alias kubens='bdg_proxy; /usr/bin/kubens'
+alias k='bdg_proxy; /usr/bin/kubectl'
+complete -o default -F __start_kubectl k
+
+# bedagctl stuff
+# shellcheck source=/dev/null
+[ -f "${HOME}/.scripts/bedagctl" ] && source <(BEDAGCTL_ADMIN=1 "${HOME}/.scripts/bedagctl" completion bash)
+alias bedagctl='bdg_proxy; export BEDAGCTL_ADMIN=1; bedagctl'
+## END ANSIBLE BLOCK ##
