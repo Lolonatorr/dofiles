@@ -1,0 +1,2 @@
+ACTION=="add", SUBSYSTEM=="drm", KERNEL=="card0", RUN+="/home/phon/home/phonkd/git/dotfiles/scripts/amonitor.sh"
+

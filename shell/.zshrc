@@ -147,6 +147,9 @@ kb() {
 coi() {
   if pgrep -f '[s]shgwbe' 1>/dev/null; then { ssh admingwbe; true; } else ssh admingwwe; fi
 }
+alias co='ssh sshgwcobe'
+alias kb='ssh sshgwkbbe'
+alias ci='ssh sshgwcibe'
 
 alias bdg_ldap="source \${HOME}/.scripts/bdg_ldap.sh"
 alias bedag="~/.scripts/bdg_gwup.sh nobecloud"
@@ -158,7 +161,7 @@ alias glab='bdg_proxy; /usr/bin/glab'
 
 # Kubernetes stuff
 # shellcheck source=/usr/bin/kubectl
-source <(kubectl completion bash)
+source <(kubectl completion zsh)
 alias kubectl='bdg_proxy; /usr/bin/kubectl'
 alias kubens='bdg_proxy; /usr/bin/kubens'
 alias k='bdg_proxy; /usr/bin/kubectl'
@@ -169,3 +172,5 @@ complete -o default -F __start_kubectl k
 [ -f "${HOME}/.scripts/bedagctl" ] && source <(BEDAGCTL_ADMIN=1 "${HOME}/.scripts/bedagctl" completion bash)
 alias bedagctl='bdg_proxy; export BEDAGCTL_ADMIN=1; bedagctl'
 ## END ANSIBLE BLOCK ##
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+
