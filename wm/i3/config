@@ -201,7 +201,6 @@ exec --no-startup-id xrandr --output DP-0 --primary --mode 2560x1440 --rate 144
 #ssh
 exec --no-startup-id /bin/bash eval $(ssh-agent)
 #wallpaper
-exec --no-startup-id nitrogen --restore
 
 #top bar of windows
 default_border none
@@ -216,7 +215,8 @@ default_floating_border none
 #"xrandr --output DP-0 --primary"
 ## Position
 ### Install ttf-nerdfont-symbols to get the symbols to work
-exec --no-startup-id ~/.config/polybar/colorblocks/launch.sh
+exec-always ~/.config/polybar/colorblocks/launch.sh
+exec-always /bin/bash/ nitrogen --restore
 bar {
 	position top
 	output none 
