@@ -10,6 +10,7 @@ firefox
 flameshot
 pavucontrol
 zsh
+rofi
 )
 pacman_cmd="sudo pacman -S --noconfirm "
 

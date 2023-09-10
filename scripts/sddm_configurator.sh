@@ -11,8 +11,16 @@ else
 fi
 echo "enter the path of your desired theme"
 read  -e desired_theme
-echo "copying theme"
-sudo cp -r $desired_theme $theme_folder_path
+echo "is your theme still in .tar format? y/any"
+read isthemetar
+if [[ "$isthemetar" == "y" || "$isthemetar" == "Y" ]]
+then
+	echo "copying theme"
+	tar -xf $desired_theme -C $theme_folder_path
+else	
+	echo "copying theme"
+	sudo cp -r $desired_theme $theme_folder_path
+fi
 echo "trying to edit sddm.conf"
 theme_directory_name=$(basename "$desired_theme")
 edit_config_cmd="sudo sed -i s/^Current=.*/Current=$theme_directory_name/ /etc/sddm.conf"
