@@ -174,3 +174,4 @@ alias bedagctl='bdg_proxy; export BEDAGCTL_ADMIN=1; bedagctl'
 ## END ANSIBLE BLOCK ##
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
