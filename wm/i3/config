@@ -215,7 +215,7 @@ default_floating_border none
 #"xrandr --output DP-0 --primary"
 ## Position
 ### Install ttf-nerdfont-symbols to get the symbols to work
-exec_always ~/.config/polybar/colorblocks/launch.sh
+exec_always ~/.config/polybar/launch.sh --forest
 exec_always nitrogen --restore
 exec_always autorandr -c
 bar {
