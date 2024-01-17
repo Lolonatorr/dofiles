@@ -238,4 +238,5 @@ exec_always --no-startup-id picom --config ~/git/dotfiles/wm/i3/picom-conf-new.c
 bindsym $mod+y exec i3lock-fancy
 #screenshot
 bindsym $mod+c exec flameshot gui
+exec --no-startup-id /bin/easyeffects --gapplication-service
 
