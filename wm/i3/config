@@ -203,7 +203,7 @@ exec --no-startup-id /bin/bash eval $(ssh-agent)
 #wallpaper
 
 #top bar of windows
-default_border none
+#default_border none
 default_floating_border none
 
 #huh
@@ -232,11 +232,12 @@ bar {
 
 ## hide bar
 bindsym $mod+n bar mode toggle
-exec_always --no-startup-id picom --config ~/git/dotfiles/wm/i3/picom-conf-new.conf
+#exec_always --no-startup-id picom --config ~/git/dotfiles/wm/i3/picom-conf-new.conf
 
 # lock
 bindsym $mod+y exec i3lock-fancy
 #screenshot
 bindsym $mod+c exec flameshot gui
 exec --no-startup-id /bin/easyeffects --gapplication-service
+bindsym $mod+e exec nemo
 
